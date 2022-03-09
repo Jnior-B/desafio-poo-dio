@@ -33,6 +33,7 @@ public class Main {
         System.out.println(mentoria);
         */
         Bootcamp bootcamp = new Bootcamp();
+        bootcamp.getDataInicial();
         bootcamp.setNome("Bootcamp Java Developper");
         bootcamp.setDescricao("Descrição Bootcamp Java Developper");
         bootcamp.getConteudos().add(curso1);
@@ -41,11 +42,12 @@ public class Main {
 
         Dev devJunior =new Dev();
         devJunior.setNome("Junior");
+
         devJunior.inscreverBootcamp(bootcamp);
         System.out.println("Conteudos Inscritos Junior" + devJunior.getConteudosInscritos());
-        devJunior.progredir();
-        devJunior.progredir();
-        devJunior.progredir();
+        devJunior.progredir(bootcamp);
+        devJunior.progredir(bootcamp);
+        //devJunior.progredir();
         System.out.println("-");
         System.out.println("Conteudos Inscritos Junior" + devJunior.getConteudosInscritos());
         System.out.println("Conteudos Concluidos Junior" + devJunior.getConteudosConcluidos());
@@ -59,9 +61,9 @@ public class Main {
         devBamba.setNome("Bamba");
         devBamba.inscreverBootcamp(bootcamp);
         System.out.println("Conteudos Inscritos Bamba" + devBamba.getConteudosInscritos());
-        devBamba.progredir();
-        devBamba.progredir();
-        devBamba.progredir();
+        devBamba.progredir(bootcamp);
+        devBamba.progredir(bootcamp);
+        //devBamba.progredir();
         System.out.println("-");
         System.out.println("Conteudos Inscritos Bamba" + devBamba.getConteudosInscritos());
         System.out.println("Conteudos Concluidos Bamba" + devBamba.getConteudosConcluidos());
